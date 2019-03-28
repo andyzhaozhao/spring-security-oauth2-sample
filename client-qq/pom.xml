@@ -7,10 +7,10 @@
 		<artifactId>spring-security-oauth2-sample</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>client</artifactId>
+	<artifactId>client-qq</artifactId>
 
-	<name>client</name>
-	<description>spring-security-oauth2-client最简DEMO</description>
+	<name>client-qq</name>
+	<description>Demo project for Spring Boot</description>
 
 	<dependencies>
 		<dependency>
@@ -32,6 +32,19 @@
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-oauth2-jose</artifactId>
+		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.security</groupId>-->
+			<!--<artifactId>spring-security-oauth2-jose</artifactId>-->
+			<!--<version>5.0.11.RELEASE</version>-->
+		<!--</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-springsecurity4</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

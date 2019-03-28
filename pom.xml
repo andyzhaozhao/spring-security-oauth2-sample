@@ -25,6 +25,7 @@
 
     <modules>
         <module>client</module>
+        <module>client-qq</module>
     </modules>
 
 </project>
