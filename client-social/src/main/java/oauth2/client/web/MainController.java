@@ -31,5 +31,4 @@ public class MainController {
         return this.authorizedClientService.loadAuthorizedClient(
                 authentication.getAuthorizedClientRegistrationId(), authentication.getName());
     }
-
 }

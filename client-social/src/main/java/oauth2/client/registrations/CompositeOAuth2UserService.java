@@ -11,7 +11,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
+ * OAuth2UserService的组合类，使用了Composite Pattern（组合模式）
+ * 除了同时支持GOOGLE，OKTA，GITHUB，FACEBOOK，常常还需要同时支持QQ、微信等等多种认证
+ * 根据registrationId选择相应的OAuth2UserService
  */
 public class CompositeOAuth2UserService implements OAuth2UserService<OAuth2UserRequest, OAuth2User> {
     private Map<String, OAuth2UserService> userServices;

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.security.Principal;
 
 @RestController
-public class HomeController {
+public class SimpleController {
 
     @RequestMapping("/")
     public String email(Principal principal) {

@@ -29,13 +29,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest()
                 .authenticated();
         http.oauth2Login()
-                .redirectionEndpoint().baseUri("/register/social/*")
-                .and()
+                // 使用CompositeOAuth2AccessTokenResponseClient
                 .tokenEndpoint().accessTokenResponseClient(this.accessTokenResponseClient())
                 .and()
                 .userInfoEndpoint()
-                .customUserType(QQUserInfo.class, "qq")
-                .userService(oauth2UserService());
+                .customUserType(QQUserInfo.class, QQRegistrationId)
+                // 使用CompositeOAuth2UserService
+                .userService(oauth2UserService())
+                // 可选，要保证与redirect-uri-template匹配
+                .and()
+                .redirectionEndpoint().baseUri("/register/social/*");
 
         //自定义登录页
         http.oauth2Login().loginPage(LoginPagePath);
@@ -43,12 +46,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private OAuth2AccessTokenResponseClient<OAuth2AuthorizationCodeGrantRequest> accessTokenResponseClient() {
         CompositeOAuth2AccessTokenResponseClient client = new CompositeOAuth2AccessTokenResponseClient();
+        // 加入QQ自定义QQOAuth2AccessTokenResponseClient
         client.getOAuth2AccessTokenResponseClients().put(QQRegistrationId, new QQOAuth2AccessTokenResponseClient());
         return client;
     }
 
     private OAuth2UserService<OAuth2UserRequest, OAuth2User> oauth2UserService() {
         CompositeOAuth2UserService service = new CompositeOAuth2UserService();
+        // 加入QQ自定义QQOAuth2UserService
         service.getUserServices().put(QQRegistrationId, new QQOAuth2UserService());
         return service;
     }
