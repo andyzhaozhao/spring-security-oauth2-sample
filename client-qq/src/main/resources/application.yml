@@ -18,8 +18,8 @@ spring:
             client-secret: 1df4770d5aa78ac10c46032ff7e4ddaabb430d6d
             redirect-uri-template: "{baseUrl}/register/social/{registrationId}"
           qq:
-            client-id: xxxxx
-            client-secret: yyyyy
+            client-id: 101476839
+            client-secret: 712bc06e6f390082b57a68dc54a39164
             provider: qq
             client-name: QQ登录
             authorization-grant-type: authorization_code

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <title>Spring Security - OAuth 2.0 Login</title>
+    <meta charset="utf-8"/>
+</head>
+<body>
+<div style="float: right" th:fragment="logout" sec:authorize="isAuthenticated()">
+    <div style="float:left">
+        <span style="font-weight:bold">用户: </span><span sec:authentication="name"></span>
+    </div>
+    <div style="float:none">&nbsp;</div>
+    <div style="float:right">
+        <form action="#" th:action="@{/logout}" method="post">
+            <input type="submit" value="注销"/>
+        </form>
+    </div>
+</div>
+<h1>使用Spring Security OAuth 2.0 登录</h1>
+<div>
+    恭喜您通过"<span style="font-weight:bold" th:text="${clientName}"></span>"
+    登录成功
+</div>
+</body>
+</html>

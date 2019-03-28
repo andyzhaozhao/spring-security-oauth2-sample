@@ -20,9 +20,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public static final String QQRegistrationId = "qq";
     public static final String WeChatRegistrationId = "wechat";
 
+    public static final String LoginPagePath = "/login/oauth2";
+
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
+                .antMatchers(LoginPagePath).permitAll()
                 .anyRequest()
                 .authenticated();
         http.oauth2Login()
@@ -34,6 +37,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .customUserType(QQUserInfo.class, "qq")
                 .userService(oauth2UserService());
 
+        //自定义登录页
+        http.oauth2Login().loginPage(LoginPagePath);
     }
 
     private OAuth2AccessTokenResponseClient<OAuth2AuthorizationCodeGrantRequest> accessTokenResponseClient() {
