@@ -1,4 +1,4 @@
-package com.demo.oauth2.client.web;
+package oauth2.client.web;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

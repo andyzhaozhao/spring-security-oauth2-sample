@@ -7,12 +7,13 @@
 		<artifactId>spring-security-oauth2-sample</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>client-qq</artifactId>
+	<artifactId>client-social</artifactId>
 
-	<name>client-qq</name>
-	<description>Demo project for Spring Boot</description>
+	<name>client-social</name>
+	<description>使用Spring Security Oauth2登录QQ，微信等</description>
 
 	<dependencies>
+		<!--基础-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -21,6 +22,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
+		<!--Oauth2 登录-->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>
@@ -33,6 +35,7 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-oauth2-jose</artifactId>
 		</dependency>
+		<!--页面模版-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
