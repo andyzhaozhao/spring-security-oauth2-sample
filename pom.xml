@@ -28,6 +28,7 @@
         <module>client-social</module>
         <module>resourceserver</module>
         <module>authorizationserver</module>
+        <module>client-for-server</module>
     </modules>
 
 </project>
