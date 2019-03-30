@@ -1,0 +1,19 @@
+server:
+  port: 9090
+
+spring:
+  profiles:
+    active: test
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: DEBUG
+    org.springframework.boot.autoconfigure: DEBUG
+
+security:
+  oauth2:
+    resource.:
+#      token-info-uri: http://localhost:9999/oauth/check_token
+      user-info-uri: http://localhost:9999/me

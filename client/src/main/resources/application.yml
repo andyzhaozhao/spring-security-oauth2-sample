@@ -9,3 +9,31 @@ spring:
           github:
             client-id: b7fb29a538bb19b09365
             client-secret: 2fbfd22e69e61d873bad55143538770748a76d3a
+
+
+#配置属性可参考：
+#spring:
+#  thymeleaf:
+#    cache: false
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          google:
+#            client-id: your-app-client-id
+#            client-secret: your-app-client-secret
+#          github:
+#            client-id: your-app-client-id
+#            client-secret: your-app-client-secret
+#          facebook:
+#            client-id: your-app-client-id
+#            client-secret: your-app-client-secret
+#          okta:
+#            client-id: your-app-client-id
+#            client-secret: your-app-client-secret
+#        provider:
+#          okta:
+#            authorization-uri: https://your-subdomain.oktapreview.com/oauth2/v1/authorize
+#            token-uri: https://your-subdomain.oktapreview.com/oauth2/v1/token
+#            user-info-uri: https://your-subdomain.oktapreview.com/oauth2/v1/userinfo
+#            jwk-set-uri: https://your-subdomain.oktapreview.com/oauth2/v1/keys

@@ -1,8 +1,10 @@
-package oauth2.authorizationserver;
+package oauth2.authorizationserver.otherresourceserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Profile;
 
+@Profile("otherResourceServer")
 @SpringBootApplication
 public class AuthorizationserverApplication {
 
