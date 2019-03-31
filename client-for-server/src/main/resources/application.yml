@@ -33,31 +33,3 @@ spring:
             user-info-uri: http://localhost:9999/me
             user-name-attribute: "name"
             jwk-set-uri: http://localhost:9999/.well-known/jwks.json
-
-
-
-
-            #spring:
-            #  thymeleaf:
-            #    cache: false
-            #  security:
-            #    oauth2:
-            #      client:
-            #        registration:
-            #          github:
-            #            client-id: b7fb29a538bb19b09365
-            #            client-secret: 2fbfd22e69e61d873bad55143538770748a76d3a
-            #          tdf:
-            #            client-id: tdfOauth2SSO213
-            #            client-secret: 123456
-            #            provider: tdf
-            #            client-name: 太极统一认证
-            #            authorization-grant-type: authorization_code
-            #            redirect-uri-template: "{baseUrl}/login/oauth2/code/{registrationId}"
-            #        provider:
-            #          tdf:
-            #            authorization-uri: http://localhost:9999/oauth/authorize
-            #            token-uri: http://localhost:9999/oauth/token
-            #            user-info-uri: http://localhost:9999/user/me
-            #            user-name-attribute: "name"
-            #            jwk-set-uri: http://localhost:9999/.well-known/jwks.json
