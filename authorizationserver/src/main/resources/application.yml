@@ -4,8 +4,8 @@ server:
 spring:
   profiles:
 #    active: minimal
-    active: simple
-#    active: otherResourceServer
+#    active: simple
+    active: otherResourceServer
 
 logging:
   level:

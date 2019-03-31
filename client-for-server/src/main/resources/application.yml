@@ -32,6 +32,7 @@ spring:
             token-uri: http://localhost:9999/oauth/token
             user-info-uri: http://localhost:9999/me
             user-name-attribute: "name"
+            jwk-set-uri: http://localhost:9999/.well-known/jwks.json
 
 
 

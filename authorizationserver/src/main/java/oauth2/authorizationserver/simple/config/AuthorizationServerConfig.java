@@ -54,10 +54,10 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 // 此Client拥有的权限，资源服务器可以依据此处定义的权限对Client进行鉴权。
                 .authorities("ROLE_CLIENT")
                 // 此Client可以访问的资源的范围，资源服务器可以依据此处定义的范围对Client进行鉴权。
-                .scopes("profile", "email", "phone", "aaa")
+                .scopes("profile", "email", "phone")
                 // 自动批准的范围（scope），自动批准的scope在批准页不需要显示，即不需要用户确认批准，如果所有scope都自动批准，
                 // 则不显示批准页
-                .autoApprove("profile", "email", "phone", "aaa");
+                .autoApprove("profile");
     }
 
     /**

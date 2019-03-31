@@ -30,9 +30,6 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
         super.configure(resources);
         resources.resourceId(RESOURCE_ID);
-        // Flag to indicate that only token-based authentication is allowed on these resources
-        // 默认值是true
-        //.stateless();
     }
 
     @Override

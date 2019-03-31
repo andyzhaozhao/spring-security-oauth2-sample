@@ -30,16 +30,13 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
         super.configure(resources);
         resources.resourceId(RESOURCE_ID);
-        // Flag to indicate that only token-based authentication is allowed on these resources
-        // 默认值是true
-        //.stateless();
     }
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
         logger.info("ResourceServerConfig中配置HttpSecurity对象执行");
         // 只有/user端口作为资源服务器的资源
-        http.requestMatchers().antMatchers("/me","/phone")
+        http.requestMatchers().antMatchers("/me")
                 .and()
                 .authorizeRequests()
                 .anyRequest().authenticated();
