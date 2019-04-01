@@ -1,4 +1,4 @@
-package oauth2.authorizationserver.simple.config;
+package oauth2.authorizationserver.jdbc.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +18,7 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Res
  * EnableResourceServer将会创建一个WebSecurityConfigurerAdapter执行顺序（Order）是3。在SecurityConfiguration类之前
  * 运行，有更高的优先级。
  */
-@Profile("simple")
+@Profile("jdbc")
 @Configuration
 @EnableResourceServer
 public class ResourceServerConfig extends ResourceServerConfigurerAdapter {

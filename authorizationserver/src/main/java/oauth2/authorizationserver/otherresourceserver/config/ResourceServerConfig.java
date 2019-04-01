@@ -35,7 +35,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
         logger.info("ResourceServerConfig中配置HttpSecurity对象执行");
-        // 只有/user端口作为资源服务器的资源
+        // 只有/me端口和/phone端口作为资源服务器的资源
         http.requestMatchers().antMatchers("/me","/phone")
                 .and()
                 .authorizeRequests()

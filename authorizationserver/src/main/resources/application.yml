@@ -5,7 +5,8 @@ spring:
   profiles:
 #    active: minimal
 #    active: simple
-    active: otherResourceServer
+    active: jdbc
+#    active: otherResourceServer
 
 logging:
   level:
