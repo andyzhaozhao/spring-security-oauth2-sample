@@ -8,9 +8,9 @@ import java.security.Principal;
 @RestController
 public class SimpleController {
 
-    @RequestMapping("/")
+    @RequestMapping("/hello")
     public String email(Principal principal) {
-        return "Hello 1 " + principal.getName();
+        return "hello， " + principal.getName();
     }
 
 }
