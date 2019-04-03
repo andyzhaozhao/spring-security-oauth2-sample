@@ -10,7 +10,7 @@
 	<artifactId>client-social</artifactId>
 
 	<name>client-social</name>
-	<description>使用Spring Security Oauth2登录QQ，微信等</description>
+	<description>使用Spring Security OAuth2登录QQ，微信等</description>
 
 	<dependencies>
 		<!--基础-->
@@ -22,7 +22,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
-		<!--Oauth2 登录-->
+		<!--OAuth2 登录-->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>

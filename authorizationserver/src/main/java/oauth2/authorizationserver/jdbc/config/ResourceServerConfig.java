@@ -11,8 +11,8 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Res
 
 /**
  * 资源服务器配置
- * 资源服务器的指责是对来自于Oauth2 Client的access_token进行鉴权。一个资源服务器包含多个端点（接口），
- * 一部分端点是作为资源服务器的资源提供给Oauth2的Client访问,另一部分端点不由资源服务器管理
+ * 资源服务器的指责是对来自于OAuth2 Client的access_token进行鉴权。一个资源服务器包含多个端点（接口），
+ * 一部分端点是作为资源服务器的资源提供给OAuth2的Client访问,另一部分端点不由资源服务器管理
  * 有资源服务器管理的端点安全性配置在此类中，其余端点的安全性配置在SecurityConfiguration类中。
  * 当请求中包含OAuth2 access_token时Spring Security根据资源服务器配置进行过滤。
  * EnableResourceServer将会创建一个WebSecurityConfigurerAdapter执行顺序（Order）是3。在SecurityConfiguration类之前

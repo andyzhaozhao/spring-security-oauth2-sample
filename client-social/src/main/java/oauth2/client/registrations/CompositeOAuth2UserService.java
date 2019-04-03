@@ -22,7 +22,7 @@ public class CompositeOAuth2UserService implements OAuth2UserService<OAuth2UserR
 
     public CompositeOAuth2UserService() {
         this.userServices = new HashMap();
-        // DefaultOAuth2UserService是默认处理Oauth2协议获取用户逻辑的OAuth2UserService实现类
+        // DefaultOAuth2UserService是默认处理OAuth2协议获取用户逻辑的OAuth2UserService实现类
         // 将其预置到组合类CompositeOAuth2UserService中，从而默认支持GOOGLE，OKTA，GITHUB，FACEBOOK
         this.userServices.put(DefaultUserServiceKey, new DefaultOAuth2UserService());
     }

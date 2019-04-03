@@ -10,7 +10,7 @@
     
     <artifactId>resourceserver</artifactId>
     <name>resourceserver</name>
-    <description>Demo project for Oauth2 Resource Server</description>
+    <description>Demo project for OAuth2 Resource Server</description>
 
     <dependencies>
         <dependency>

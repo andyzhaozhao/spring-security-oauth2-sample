@@ -9,7 +9,7 @@
     </parent>
     <artifactId>authorizationserver</artifactId>
     <name>authorizationserver</name>
-    <description>Demo project for Spring Security Oauth2 Authorization Server</description>
+    <description>Demo project for Spring Security OAuth2 Authorization Server</description>
 
     <dependencies>
         <dependency>
