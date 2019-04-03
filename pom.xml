@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
 
     <name>spring-security-oauth2-sample</name>
-    <description>Demo project for Spring Security Oauth2</description>
+    <description>Demo project for Spring Security OAuth2</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
